@@ -7,10 +7,12 @@ interface Props extends Options {
 
 function WriteBox({ text, setText }: Props) {
   return (
-    <Box>
+    <Box.container>
       <Box.title>Write</Box.title>
-      <Box.textarea value={text} onChange={(e) => setText(e.target.value)} autoFocus />
-    </Box>
+      <Box>
+        <Box.textarea value={text} onChange={(e) => setText(e.target.value)} autoFocus />
+      </Box>
+    </Box.container>
   );
 }
 

@@ -7,10 +7,12 @@ interface Props {
 
 function CssBox({ cssText, setCssText }: Props) {
   return (
-    <Box>
+    <Box.container>
       <Box.title>CSS Style</Box.title>
-      <Box.textarea className="preview" value={cssText} onChange={(e) => setCssText(e.target.value)} />
-    </Box>
+      <Box>
+        <Box.textarea className="preview" value={cssText} onChange={(e) => setCssText(e.target.value)} />
+      </Box>
+    </Box.container>
   );
 }
 

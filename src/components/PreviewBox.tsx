@@ -7,18 +7,20 @@ interface Props extends Options {
   cssText: string;
 }
 
-const TextAreaWithCssStyle = styled(Box.div)<{ css: string }>`
+const DivWithCssStyle = styled(Box.div)<{ css: string }>`
   ${(props) => props.css}
 `;
 
 const PreviewBox = forwardRef<HTMLDivElement, Props>(({ cssText: css, text }, ref) => {
   return (
-    <Box>
+    <Box.container>
       <Box.title>Preview</Box.title>
-      <TextAreaWithCssStyle ref={ref} className="preview" css={css}>
-        {text}
-      </TextAreaWithCssStyle>
-    </Box>
+      <Box>
+        <DivWithCssStyle ref={ref} className="preview" css={css}>
+          {text}
+        </DivWithCssStyle>
+      </Box>
+    </Box.container>
   );
 });
 
