@@ -1,8 +1,9 @@
 import html2canvas from 'html2canvas';
-import './App.css';
 import { useRef, useState } from 'react';
-import WriteBox from './components/WriteBox';
+import styled from 'styled-components';
+import './App.css';
 import PreviewBox from './components/PreviewBox';
+import WriteBox from './components/WriteBox';
 
 function App() {
   const onSaveAs = (uri: string, fileName: string) => {
@@ -30,12 +31,18 @@ function App() {
   return (
     <>
       <div id="card">
-        <WriteBox text={text} setText={setText} />
-        <PreviewBox text={text} ref={targetRef} />
+        <BoxWrapper>
+          <WriteBox text={text} setText={setText} />
+          <PreviewBox text={text} ref={targetRef} />
+        </BoxWrapper>
         <button onClick={() => downloadImage()}>Generate</button>
       </div>
     </>
   );
 }
+
+const BoxWrapper = styled.div`
+  display: flex;
+`;
 
 export default App;
