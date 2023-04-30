@@ -19,6 +19,7 @@ function CssBox({ cssText, setCssText }: Props) {
           placeholder={`color: black;
 background-color: white;
 font-size: 40px;
+font-weight: 400;
 text-align: center;`}
         />
         <Decorator>{`}`}</Decorator>
