@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import './App.css';
 import PreviewBox from './components/PreviewBox';
 import WriteBox from './components/WriteBox';
+import CssBox from './components/CssBox';
 
 function App() {
   const onSaveAs = (uri: string, fileName: string) => {
@@ -27,13 +28,15 @@ function App() {
   };
 
   const [text, setText] = useState<string>('');
+  const [cssText, setCssText] = useState<string>('');
   const targetRef = useRef<HTMLDivElement | null>(null);
   return (
     <>
       <div id="card">
         <BoxWrapper>
           <WriteBox text={text} setText={setText} />
-          <PreviewBox text={text} ref={targetRef} />
+          <PreviewBox text={text} cssText={cssText} ref={targetRef} />
+          <CssBox cssText={cssText} setCssText={setCssText} />
         </BoxWrapper>
         <button onClick={() => downloadImage()}>Generate</button>
       </div>
