@@ -1,5 +1,8 @@
 import html2canvas from 'html2canvas';
 import './App.css';
+import { useState } from 'react';
+import WriteBox from './components/WriteBox';
+import PreviewBox from './components/PreviewBox';
 
 function App() {
   const onSaveAs = (uri: string, fileName: string) => {
@@ -22,16 +25,14 @@ function App() {
     onSaveAs(canvas.toDataURL('image/png'), 'result.png');
   };
 
+  const [text, setText] = useState<string>('');
   return (
     <>
-      <h1>Vite + React</h1>
       <div id="card">
+        <WriteBox text={text} setText={setText} />
+        <PreviewBox text={text} />
         <button onClick={() => downloadImage()}>count is</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
   );
 }
