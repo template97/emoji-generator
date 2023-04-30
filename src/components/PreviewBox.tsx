@@ -9,9 +9,10 @@ import { Options } from './types';
 const PreviewBox = forwardRef<HTMLDivElement, Options>(({ text }, ref) => {
   return (
     <Box>
-      <div ref={ref} className="preview">
+      <Box.title>Preview</Box.title>
+      <Box.div ref={ref} className="preview">
         {text}
-      </div>
+      </Box.div>
     </Box>
   );
 });
