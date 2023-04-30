@@ -118,6 +118,7 @@ PERFORMANCE OF THIS SOFTWARE.
 `,Fy=Te.forwardRef(({cssText:A,text:e},t)=>gA.jsxs(Ke.container,{children:[gA.jsx(Ke.title,{children:"Preview"}),gA.jsx(Ke,{children:gA.jsx(Uy,{ref:t,className:"preview",css:A,children:e})})]}));function vy({text:A,setText:e}){return gA.jsxs(Ke.container,{children:[gA.jsx(Ke.title,{children:"Input"}),gA.jsx(Ke,{children:gA.jsx(Ke.textarea,{value:A,onChange:t=>e(t.target.value),autoFocus:!0})})]})}function my({cssText:A,setCssText:e}){return gA.jsxs(Ke.container,{children:[gA.jsx(Ke.title,{children:"CSS Style"}),gA.jsxs(Ke,{children:[gA.jsx(Pf,{children:"div {"}),gA.jsx(yy,{className:"css-box",value:A,onChange:t=>e(t.target.value),placeholder:`color: black;
 background-color: white;
 font-size: 40px;
+font-weight: 400;
 text-align: center;`}),gA.jsx(Pf,{children:"}"})]})]})}const Pf=ot.div`
   text-align: left;
   color: white;
