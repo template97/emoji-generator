@@ -1,3 +1,4 @@
+import Box from './Box';
 import { Options } from './types';
 
 interface Props extends Options {
@@ -6,9 +7,9 @@ interface Props extends Options {
 
 function WriteBox({ text, setText }: Props) {
   return (
-    <div>
-      <textarea value={text} onChange={(e) => setText(e.target.value)} />
-    </div>
+    <Box>
+      <textarea value={text} onChange={(e) => setText(e.target.value)} autoFocus />
+    </Box>
   );
 }
 

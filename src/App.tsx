@@ -43,6 +43,8 @@ function App() {
 
 const BoxWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 `;
 
 export default App;
