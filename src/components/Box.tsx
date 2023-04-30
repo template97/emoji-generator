@@ -29,6 +29,7 @@ const BoxContextStyle = css`
   text-align: center;
   vertical-align: middle;
   font-weight: 400;
+  word-break: break-all;
 
   resize: none;
   outline: none;
@@ -44,6 +45,7 @@ const Box = Object.assign(_Box, {
   container: BoxWrapper,
   div: styled.div`
     ${BoxContextStyle}
+    overflow: hidden;
   `,
   textarea: styled.textarea`
     ${BoxContextStyle}
