@@ -1,9 +1,12 @@
+import { forwardRef } from 'react';
 import { Options } from './types';
 
-// interface Props extends Options {}
+// interface Props extends Options {
 
-function PreviewBox({ text }: Options) {
-  return <div>{text}</div>;
-}
+// }
+
+const PreviewBox = forwardRef<HTMLDivElement, Options>(({ text }, ref) => {
+  return <div ref={ref}>{text}</div>;
+});
 
 export default PreviewBox;
