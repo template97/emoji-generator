@@ -12,7 +12,15 @@ function CssBox({ cssText, setCssText }: Props) {
       <Box.title>CSS Style</Box.title>
       <Box>
         <Decorator>{`div {`}</Decorator>
-        <CssTextarea className="css-box" value={cssText} onChange={(e) => setCssText(e.target.value)} />
+        <CssTextarea
+          className="css-box"
+          value={cssText}
+          onChange={(e) => setCssText(e.target.value)}
+          placeholder={`color: black;
+background-color: white;
+font-size: 40px;
+text-align: center;`}
+        />
         <Decorator>{`}`}</Decorator>
       </Box>
     </Box.container>
@@ -43,5 +51,10 @@ const CssTextarea = styled.textarea`
 
   resize: none;
   outline: none;
+
+  ::placeholder {
+    color: #ffffff50;
+    font-style: italic;
+  }
 `;
 export default CssBox;

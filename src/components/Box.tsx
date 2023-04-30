@@ -27,7 +27,6 @@ const BoxContextStyle = css`
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 40px;
   text-align: center;
-  vertical-align: middle;
   font-weight: 400;
   word-break: break-all;
 
